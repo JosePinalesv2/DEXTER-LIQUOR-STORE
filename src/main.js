@@ -3,9 +3,9 @@ import './style.css';
 // =========================================================================
 // 🎓 DATOS DE LA ESTUDIANTE (MODIFICA AQUÍ PARA LA ENTREGA OFICIAL)
 // =========================================================================
-const ESTUDIANTE_NOMBRE = "Tu Nombre Completo";
-const ESTUDIANTE_MATRICULA = "Tu Matrícula / ID";
-const ESTUDIANTE_CORREO = "tu.correo@institucional.edu";
+const ESTUDIANTE_NOMBRE = "Ana Cristina Quezada Villar";
+const ESTUDIANTE_MATRICULA = "[Ingresa tu Matrícula aquí]";
+const ESTUDIANTE_CORREO = "Aqvillar121998@gmail.com";
 
 // =========================================================================
 // 🍾 BASE DE DATOS DE PRODUCTOS (IMÁGENES REALES DEL REPOSITORIO)
