@@ -1014,86 +1014,187 @@ body {
   color: #25D366;
 }
 
-/* Brand Kit Styling */
-.brandkit-grid {
+/* Brand Kit / Editorial Specboard Styling */
+.jw-specboard {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 36px;
   margin-bottom: 72px;
 }
 
-@media (max-width: 768px) {
-  .brandkit-grid {
+@media (max-width: 992px) {
+  .jw-specboard {
     grid-template-columns: 1fr;
   }
 }
 
-.color-palette {
+/* Swatches Container - Designer Pantone Layout */
+.jw-swatches-container {
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  padding: 36px 32px;
+  background: rgba(244, 241, 234, 0.01);
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  justify-content: space-between;
+  border-radius: 0px; /* Completely sharp editorial borders */
 }
 
-.color-swatch {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid var(--border-dark);
-  background: rgba(244, 241, 234, 0.02);
-}
-
-.color-box {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
-  border: 1px solid rgba(244, 241, 234, 0.1);
-}
-
-.color-info h5 {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 2px;
-}
-
-.color-info span {
-  font-size: 12px;
-  color: var(--text-muted-light);
-  font-family: monospace;
-}
-
-.typography-display {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.typo-row {
-  border-left: 2px solid var(--gold);
-  padding-left: 20px;
-}
-
-.typo-row h6 {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--gold);
-  margin-bottom: 4px;
-}
-
-.typo-sample-serif {
+.jw-swatches-header h4 {
   font-family: var(--font-serif);
-  font-size: 38px;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text-light);
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+.jw-swatches-header p {
+  font-size: 13px;
+  color: var(--text-muted-light);
+  margin-bottom: 24px;
+}
+
+.jw-swatches-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .jw-swatches-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.jw-color-swatch-card {
+  flex: 1;
+  border: 1px dashed rgba(197, 160, 89, 0.35); /* Dashed golden outline - completely unique */
+  padding: 10px;
+  background: var(--bg-dark-accent);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jw-color-swatch-card:hover {
+  transform: translateY(-5px);
+  border-style: solid;
+  border-color: var(--gold);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 15px var(--gold-glow);
+}
+
+.jw-color-block {
+  width: 100%;
+  height: 110px;
+  border-radius: 0px; /* Sharp borders */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 12px;
+}
+
+.jw-color-info {
+  text-align: center;
+  padding: 4px 0;
+}
+
+.jw-color-name {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-light);
+  margin-bottom: 4px;
   line-height: 1.2;
 }
 
-.typo-sample-sans {
+.jw-color-hex {
+  font-size: 11px;
+  color: var(--gold);
+  font-family: monospace;
+  letter-spacing: 0.05em;
+}
+
+/* Typography Specimen Frame */
+.jw-typo-specimen {
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  padding: 36px 32px;
+  background: var(--bg-dark-accent);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0px; /* Sharp borders */
+}
+
+.jw-specimen-bg-letter {
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  font-family: var(--font-serif);
+  font-size: 260px;
+  font-weight: 200;
+  color: rgba(197, 160, 89, 0.03); /* Extremely subtle watermarked D */
+  line-height: 1;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.jw-specimen-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.jw-specimen-content h4 {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text-light);
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+}
+
+.jw-typo-specimen-row {
+  border-top: 1px solid rgba(197, 160, 89, 0.2);
+  padding: 24px 0 8px;
+}
+
+.jw-typo-specimen-row:last-child {
+  border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+  padding-bottom: 24px;
+}
+
+.jw-typo-specimen-row h6 {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.jw-typo-sample-serif {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--text-light);
+}
+
+.jw-typo-sample-sans {
   font-family: var(--font-sans);
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.05em;
+  color: var(--text-light);
+}
+
+.jw-typo-desc {
+  font-size: 13px;
+  color: var(--text-muted-light);
+  margin-top: 8px;
+  line-height: 1.5;
 }
 
 /* Boutique Showcase: High-End Filterable Product Gallery */
